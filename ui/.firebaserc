@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "paper-122c4": {
+      "hosting": {
+        "app": [
+          "paper-122c4"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "paper-122c4"
+  }
+}
