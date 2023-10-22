@@ -20,6 +20,24 @@
         --border-color: #292929;
         color: #292929;
     }
+
+    ion-button {
+        margin-top: 20px;
+        color: #292929;
+        --background: #6fa1c4;
+        --border-radius: 20px;
+        --box-shadow: 5px 5px 0px #292929;    
+    }
+
+    #loginButton {
+        --background: white;
+
+        img {
+            height: 20px;
+            margin-right: 10px;
+            background-color: transparent;
+        } 
+    }  
 }
 
 .item-has-focus {
