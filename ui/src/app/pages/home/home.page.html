@@ -1,13 +1,7 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>home</ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">home</ion-title>
-    </ion-toolbar>
-  </ion-header>
-</ion-content>
+<div class="background">
+  <div class="letter-container" *ngFor="let letter of ['P', 'A', 'P', 'E', 'R']">
+    <div class="arrow" (click)="changeColor($event)" id="up">&#9650;</div>
+    <div class="PAPER">{{ letter }}</div>
+    <div class="arrow" (click)="changeColor($event)" id="down">&#9660;</div>
+  </div>
+</div>

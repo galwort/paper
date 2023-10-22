@@ -12,4 +12,12 @@ export class HomePage implements OnInit {
   ngOnInit() {
   }
 
+  changeColor(event: Event) {
+    const element = event.target as HTMLElement;
+    if (element.classList.contains('clicked')) {
+      element.classList.remove('clicked');
+    } else {
+      element.classList.add('clicked');
+    }
+  }
 }

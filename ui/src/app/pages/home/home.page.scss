@@ -1,0 +1,29 @@
+.background {
+    background-color: #FFF5E1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+    .letter-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .PAPER {
+        font-family: 'Quicksand';
+        font-weight: bold;
+        font-size: 20vw;
+        color: #6fa1c4;
+        text-shadow: 0.75vw 0.75vw 0px #292929;
+    }
+
+    .arrow {
+        cursor: pointer;
+    }
+
+    .clicked {
+        color: red;
+    }
+}
