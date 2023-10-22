@@ -21,9 +21,13 @@
 
     .arrow {
         cursor: pointer;
+        font-size: 5vw;
+        color: #bbb;
+        margin-top: -2vw;
+        margin-bottom: -2vw;
     }
 
     .clicked {
-        color: red;
+        color: #d86e6e;
     }
 }
