@@ -19,6 +19,11 @@
         --background: transparent;
         --border-color: #292929;
         color: #292929;
+
+        ion-label {
+            font-family: 'Quicksand';
+            font-weight: bold;
+        }
     }
 
     ion-button {
@@ -26,7 +31,9 @@
         color: #292929;
         --background: #6fa1c4;
         --border-radius: 20px;
-        --box-shadow: 5px 5px 0px #292929;    
+        --box-shadow: 5px 5px 0px #292929;  
+        font-family: 'Quicksand';
+        font-weight: bold;  
     }
 
     #loginButton {
@@ -45,5 +52,7 @@
     
     ion-label {
         color: #FFF5E1 !important;
+        font-family: 'Quicksand';
+        font-weight: bold;
     }
 }
