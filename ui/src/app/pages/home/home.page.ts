@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ElementRef, Renderer2 } from '@angular/core';
 
 @Component({
   selector: 'app-home',
@@ -7,21 +7,32 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomePage implements OnInit {
 
-  constructor() { }
+  constructor(private renderer: Renderer2, private el: ElementRef) { }
 
   ngOnInit() {
   }
 
   changeColor(event: Event) {
-    const element = event.target as HTMLElement;
-    const id = element.id;
-
-    const clickedClass = id === "up" ? 'clicked-up' : 'clicked-down';
+    const clickedElement = event.target as HTMLElement;
+    const id = clickedElement.id;
     
-    if (element.classList.contains(clickedClass)) {
-      element.classList.remove(clickedClass);
+    const parentElement = clickedElement.parentElement;
+    if (!parentElement) {
+      return;
+    }
+    const oppositeArrowId = id === 'up' ? 'down' : 'up';
+    const oppositeArrow = parentElement.querySelector(`#${oppositeArrowId}`) as HTMLElement;
+    
+    const clickedClass = id === 'up' ? 'clicked-up' : 'clicked-down';
+    const oppositeClass = oppositeArrowId === 'up' ? 'clicked-up' : 'clicked-down';
+    
+    if (oppositeArrow.classList.contains(oppositeClass)) {
+      oppositeArrow.classList.remove(oppositeClass);
+      clickedElement.classList.remove(clickedClass);
+    } else if (clickedElement.classList.contains(clickedClass)) {
+      clickedElement.classList.remove(clickedClass);
     } else {
-      element.classList.add(clickedClass);
+      clickedElement.classList.add(clickedClass);
     }
   }
 }
