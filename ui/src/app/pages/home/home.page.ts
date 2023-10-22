@@ -14,10 +14,14 @@ export class HomePage implements OnInit {
 
   changeColor(event: Event) {
     const element = event.target as HTMLElement;
-    if (element.classList.contains('clicked')) {
-      element.classList.remove('clicked');
+    const id = element.id;
+
+    const clickedClass = id === "up" ? 'clicked-up' : 'clicked-down';
+    
+    if (element.classList.contains(clickedClass)) {
+      element.classList.remove(clickedClass);
     } else {
-      element.classList.add('clicked');
+      element.classList.add(clickedClass);
     }
   }
 }
