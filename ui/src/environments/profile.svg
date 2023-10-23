@@ -1,0 +1,11 @@
+<svg width="185.27823mm" height="258.05472mm" viewBox="0 0 185.27823 258.05473">
+    <defs>
+        <clipPath id="clipPath2651">
+            <rect width="179.82553" height="120.22234" x="11.175599" y="137.83238" />
+        </clipPath>
+    </defs>
+    <g transform="translate(-7.4503991)">
+        <ellipse cx="99.691399" cy="108.7081" rx="39.961231" ry="41.315849" style="fill:#a088c4;" />
+        <ellipse cx="99.691399" cy="246.0096" rx="81.625725" ry="98.727791" clip-path="url(#clipPath2651)" style="fill:#a088c4;" />
+    </g>
+</svg>
