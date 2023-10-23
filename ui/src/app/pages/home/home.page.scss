@@ -20,12 +20,24 @@
     }
 
     .arrow {
-        cursor: pointer;
+        position: relative;
         font-size: 5vw;
         color: #bbb;
         margin-top: -2vw;
         margin-bottom: -4vw;
+    
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            cursor: pointer;
+            z-index: 1;
+        }
     }
+    
 
     .secondary {
         margin-top: 2vw;
