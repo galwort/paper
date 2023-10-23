@@ -1,3 +1,21 @@
 <ion-app>
-  <ion-router-outlet></ion-router-outlet>
+  <div class="sidebar">
+    <ion-toolbar>
+      <ion-buttons class="toolbar-buttons">
+        <ion-button class="profile-button" *ngIf="!isLoginOrProfilePage" (click)="loginOrProfile()">
+          <div class="profile">
+            <img [src]="profilePicUrl" alt="Profile">
+          </div>
+        </ion-button>
+        <div class="bottom-buttons">
+          <ion-button (click)="navigateToGitHub()">
+            <ion-icon name="logo-github"></ion-icon>
+          </ion-button>
+        </div>
+      </ion-buttons>
+    </ion-toolbar>
+  </div>
+  <ion-content>
+    <ion-router-outlet id="main-content"></ion-router-outlet>
+  </ion-content>
 </ion-app>
