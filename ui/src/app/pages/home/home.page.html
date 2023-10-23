@@ -1,13 +1,13 @@
 <div class="background">
-  <div class="letter-container" *ngFor="let letter of ['P', 'A', 'P', 'E', 'R']">
+  <div class="letter-container" *ngFor="let letter of ['P', 'A', 'P', 'E', 'R']; let i = index">
     <div class="arrow-wrapper-up">
-      <div *ngIf="showSecondUpArrow(letter)" class="arrow secondary up" (click)="changeSecondaryColor($event, letter, 'up')">&#9650;</div>
-      <div class="arrow up" (click)="changePrimaryColor($event, letter, 'up')">&#9650;</div>
+      <div *ngIf="showSecondUpArrow(i)" class="arrow secondary up" (click)="changeSecondaryColor($event, i, 'up')">&#9650;</div>
+      <div class="arrow up" (click)="changePrimaryColor($event, i, 'up')">&#9650;</div>
     </div>
     <div class="PAPER">{{ letter }}</div>
     <div class="arrow-wrapper-down">
-      <div class="arrow down" (click)="changePrimaryColor($event, letter, 'down')">&#9660;</div>
-      <div *ngIf="showSecondDownArrow(letter)" class="arrow secondary down" (click)="changeSecondaryColor($event, letter, 'down')">&#9660;</div>
+      <div class="arrow down" (click)="changePrimaryColor($event, i, 'down')">&#9660;</div>
+      <div *ngIf="showSecondDownArrow(i)" class="arrow secondary down" (click)="changeSecondaryColor($event, i, 'down')">&#9660;</div>
     </div>
   </div>
 </div>
