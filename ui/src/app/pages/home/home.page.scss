@@ -7,6 +7,10 @@
     height: 100vh;
 }
 
+input[type="range"] {
+    appearance: slider-vertical;
+}
+
 ion-button {
     margin-top: 40px;
     color: #292929;
