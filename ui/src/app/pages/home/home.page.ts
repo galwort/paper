@@ -13,12 +13,19 @@ export const db = getFirestore(app);
   styleUrls: ['./home.page.scss'],
 })
 export class HomePage implements OnInit {
+  
+  sliderValues = [3, 3, 3, 3, 3];
 
   constructor(
       private authService: AuthService,
   ) { }
 
   ngOnInit() {
+  }
+
+  sliderChanged(index: number, value: string) {
+    this.sliderValues[index] = Number(value); 
+    console.log(this.sliderValues);
   }
 
   async submit() {
@@ -28,6 +35,11 @@ export class HomePage implements OnInit {
     await setDoc(userRankingRef, {
       user: userId,
       timestamp: Timestamp.now(),
+      partner: this.sliderValues[0],
+      activity: this.sliderValues[1],
+      parents: this.sliderValues[2],
+      eating: this.sliderValues[3],
+      rest: this.sliderValues[4],
     });
   }
 }
