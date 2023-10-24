@@ -7,8 +7,24 @@
     height: 100vh;
 }
 
-input[type="range"] {
-    appearance: slider-vertical;
+.slider {
+    -webkit-appearance: none;
+    transform: rotate(270deg);
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 50px;
+    height: 50px;
+    background: url('https://source.unsplash.com/random/50x50');
+    cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+    width: 50px;
+    height: 50px;
+    background: url('https://source.unsplash.com/random/50x50');
+    cursor: pointer;
 }
 
 ion-button {
