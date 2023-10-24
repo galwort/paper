@@ -1,9 +1,16 @@
 <div class="background">
-  <input class="slider" type="range" min="1" max="5" value="3" step="1"/>
   <div class="word-container">
     <div class="letter-container" *ngFor="let letter of ['P', 'A', 'P', 'E', 'R']; let i = index">
-      <div class="PAPER">{{ letter }}</div>
+      <input 
+        class="slider"
+        [ngClass]="letter"
+        type="range" 
+        min="1" 
+        max="5" 
+        value="3" 
+        step="1"
+      />
     </div>
   </div>
   <ion-button class="submit" type="submit" expand="block">Submit</ion-button>
-</div>  
+</div>

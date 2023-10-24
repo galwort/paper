@@ -12,14 +12,13 @@
     transform: rotate(270deg);
     background-color: transparent;
     width: 300px;
-    height: 10px; 
+    height: 100px;
 }
 
 .slider::-webkit-slider-thumb {
     -webkit-appearance: none;
     width: 20vw;
     height: 20vw;
-    background: url('/assets/letters/letter-p.png');
     background-size: contain;
     transform: rotate(90deg);
     cursor: pointer;
@@ -28,10 +27,52 @@
 .slider::-moz-range-thumb {
     width: 20vw;
     height: 20vw;
-    background: url('/assets/letters/letter-p.png');
-    background-size: contain;
     transform: rotate(90deg);
     cursor: pointer;
+}
+
+.P {
+    &::-webkit-slider-thumb {
+        background: url('/assets/letters/letter-p.png');
+        background-size: contain;
+    }
+    &::-moz-range-thumb {
+        background: url('/assets/letters/letter-p.png');
+        background-size: contain;
+    }
+}
+
+.A {
+    &::-webkit-slider-thumb {
+        background: url('/assets/letters/letter-a.png');
+        background-size: contain;
+    }
+    &::-moz-range-thumb {
+        background: url('/assets/letters/letter-a.png');
+        background-size: contain;
+    }
+}
+
+.E {
+    &::-webkit-slider-thumb {
+        background: url('/assets/letters/letter-e.png');
+        background-size: contain;
+    }
+    &::-moz-range-thumb {
+        background: url('/assets/letters/letter-e.png');
+        background-size: contain;
+    }
+}
+
+.R {
+    &::-webkit-slider-thumb {
+        background: url('/assets/letters/letter-r.png');
+        background-size: contain;
+    }
+    &::-moz-range-thumb {
+        background: url('/assets/letters/letter-r.png');
+        background-size: contain;
+    }
 }
 
 ion-button {
