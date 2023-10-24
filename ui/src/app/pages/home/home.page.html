@@ -1,6 +1,6 @@
 <div class="background">
   <div class="word-container">
-    <div class="letter-container" *ngFor="let letter of ['P', 'A', 'P', 'E', 'R']; let i = index">
+    <div *ngFor="let letter of ['P', 'A', 'P', 'E', 'R']; let i = index">
       <input 
         class="slider"
         [ngClass]="letter"
