@@ -43,27 +43,5 @@ ion-button {
             color: #6fa1c4;
             text-shadow: 0.75vw 0.75vw 0px #292929;
         }
-    
-        .arrow {
-            position: relative;
-            font-size: 5vw;
-            color: #bbb;
-            margin-top: 0;
-            margin-bottom: 0;
-            cursor: pointer;
-        }
-
-        .secondary {
-            font-size: 5vw;
-            color: #bbb;
-        }
-    
-        .clicked-up {
-            color: #88c488;
-        }
-    
-        .clicked-down {
-            color: #d86e6e;
-        }
     }
 }
